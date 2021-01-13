@@ -1411,7 +1411,8 @@ export default function PuzzlePage() {
                     videos. Try to find the answer of the puzzle and enter them
                     in the input boxes given below in that page. Not all clues
                     are important. We advise you to play the challenge in{" "}
-                    <strong>Bigger Screen </strong>(Laptops)
+                    <strong>Bigger Screen </strong>(Laptops). A pen and paper
+                    might help you in the challenge.
                   </p>
                   <br />
                   <h5 style={{ marginBottom: "0.5rem" }}>Instructions :-</h5>

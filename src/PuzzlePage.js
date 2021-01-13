@@ -1692,7 +1692,7 @@ export default function PuzzlePage() {
             </section>
           </div>
         ) : (
-          <Countdown date={starttime + 90000} renderer={renderer} />
+          <Countdown date={starttime + 12000000} renderer={renderer} />
         )}
       </div>
     </div>

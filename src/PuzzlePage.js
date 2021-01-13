@@ -10,31 +10,31 @@ import TextField from "@material-ui/core/TextField";
 import bannerimage from "./Images/banner.png";
 export default function PuzzlePage() {
   const [score, setscore] = useState(500);
-  const [dart, setdart] = useState("1118");
+  const [dart, setdart] = useState("0000");
   const [dartcompleted, setdartcompleted] = useState(false);
   const [darterror, setdarterror] = useState(false);
   const [time, settime] = useState("aaaaaaaa");
   const [timecompleted, settimecompleted] = useState(false);
   const [timeerror, settimeerror] = useState(false);
-  const [helloans, sethelloans] = useState("hello");
+  const [helloans, sethelloans] = useState("aaaaa");
   const [helloanscompleted, sethelloanscompleted] = useState(false);
   const [helloanserror, sethelloanserror] = useState(false);
-  const [violet, setviolet] = useState("17532");
+  const [violet, setviolet] = useState("00000");
   const [violetcompleted, setvioletompleted] = useState(false);
   const [violeterror, setvioleterror] = useState(false);
-  const [qrcode, setqrcode] = useState("smile");
+  const [qrcode, setqrcode] = useState("aaaaa");
   const [qrcodecompleted, setqrcodecompleted] = useState(false);
   const [qrcodeerror, setqrcodeerror] = useState(false);
-  const [lockcode, setlockcode] = useState("1672943");
+  const [lockcode, setlockcode] = useState("0000000");
   const [lockcodecompleted, setlockcodecompleted] = useState(false);
   const [lockcodeerror, setlockcodeerror] = useState(false);
-  const [riddle, setriddle] = useState("library");
+  const [riddle, setriddle] = useState("aaaaaaa");
   const [riddlecompleted, setriddlecompleted] = useState(false);
   const [riddleerror, setriddleerror] = useState(false);
-  const [textans, settextans] = useState("4611");
+  const [textans, settextans] = useState("0000");
   const [textanscompleted, settextanscompleted] = useState(false);
   const [textanserror, settextanserror] = useState(false);
-  const [jigsaw, setjigsaw] = useState("30810");
+  const [jigsaw, setjigsaw] = useState("00000");
   const [jigsawcompleted, setjigsawcompleted] = useState(false);
   const [jigsawerror, setjigsawerror] = useState(false);
   const [starttime, setstarttime] = useState(Date.now());
@@ -59,26 +59,24 @@ export default function PuzzlePage() {
                 class="left-text col-lg-7 col-md-6 col-sm-12 col-xs-12"
                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
               >
-                <h1>
+                <h1 style={{ fontFamily: "Raleway" }}>
                   <strong> Gift's Hub </strong>wishes {username} a very
                   <strong> Happy Sankranthi</strong>
                 </h1>
-                <h4 style={{ color: "#ffffff" }}>Thank you for Playing. </h4>
-                <h4 style={{ color: "#ffffff" }}>Your score is {score}</h4>
-                <p>
-                  Gifts manifest our emotions and transform them into meaningful
-                  forms of love! In a digital age of fast paced lifestyle, we at
-                  Gift’s Hub aim to stand apart in providing you the old-school
-                  way of wishing your loved ones in several ways and bringing
-                  you closer.
-                </p>
-                {/* <Link to="/home"> */}
-                <button className="main-button"> Know More</button>
-                {/* </Link> */}
-                {/* <a href="#about" class="main-button-slider">
-                  Use recommended pack
-                </a> */}
+                <h2 style={{ fontFamily: "Open Sans", color: "#ffffff" }}>
+                  Your score is <strong>{score}</strong>
+                </h2>
+                <br />
+                <h4 style={{ fontFamily: "Raleway", color: "#ffffff" }}>
+                  Thank you for Playing.{" "}
+                </h4>
+                <br />
+                <h2 style={{ fontFamily: "Raleway", color: "#ffffff" }}>
+                  Stay tuned for the launch of Gifts Hub on{" "}
+                  <strong>Feb 1st</strong>.{" "}
+                </h2>
               </div>
+
               <div
                 class="col-lg-5 col-md-6 col-sm-12 col-xs-12"
                 data-scroll-reveal="enter right move 30px over 0.6s after 0.4s"
@@ -109,7 +107,7 @@ export default function PuzzlePage() {
       }
     }
     if (id === 2) {
-      if (time === username) {
+      if (time.toLowerCase() === username.toLowerCase()) {
         settimecompleted(true);
         setscore(score + 100);
         setcount(count + 1);
@@ -214,8 +212,6 @@ export default function PuzzlePage() {
         <div id="about2">
           <center>
             <div className="container-fluid">
-              <h2 style={{ color: "#ffffff" }}>Solve if u can !!!</h2>
-
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/update-image.appspot.com/o/Untitled%20presentation%20(5).png?alt=media&token=6558ec21-a9e8-46ef-a4f8-50628289c2cd"
                 usemap="#image-map"
@@ -1032,6 +1028,7 @@ export default function PuzzlePage() {
             <div class="modal-body ">
               <center>
                 <img
+                  style={{ width: "100%" }}
                   src="https://i.ytimg.com/vi/LTfhrvj2VWc/maxresdefault.jpg"
                   alt="1"
                 />
@@ -1055,18 +1052,44 @@ export default function PuzzlePage() {
               </button>
             </div>
             <div class="modal-body ">
-              Many people were rescued from the sinking ferry by the Latvian
-              helicopter crew like <strong> you</strong>.The Latvian helicopters{" "}
-              <strong>are</strong> the most beautiful ones . So <em> four</em>{" "}
-              point <em>six</em> percent of people add decimal places to make
-              their statistics look more credible. Time waits for none so stop{" "}
-              <strong>wasting</strong>. Just <em>one</em> per million was enough
-              to cause an engine failure. So<strong> your</strong>{" "}
-              responsibility is in your hands. Writers tend to be more
-              comfortable with starting a sentence with a year so{" "}
-              <strong>time</strong> is important.
-              <strong> Here</strong> you are <em>one</em> to change the society
-              now.
+              <span style={{ fontFamily: "Roboto", fontSize: "1rem" }}>
+                {" "}
+                Many people were rescued from the sinking ferry by the Latvian
+                helicopter crew like <strong> you</strong>.The Latvian
+                helicopters <strong>are</strong> the most beautiful ones . So{" "}
+                <span
+                  style={{ fontFamily: "Merriweather", fontSize: "0.95rem" }}
+                >
+                  {" "}
+                  four
+                </span>{" "}
+                point{" "}
+                <span
+                  style={{ fontFamily: "Merriweather", fontSize: "0.95rem" }}
+                >
+                  {" "}
+                  six
+                </span>{" "}
+                percent of people add decimal places to make their statistics
+                look more credible. Time waits for none so stop{" "}
+                <strong>wasting</strong>. Just{" "}
+                <span
+                  style={{ fontFamily: "Merriweather", fontSize: "0.95rem" }}
+                >
+                  one
+                </span>{" "}
+                per million was enough to cause an engine failure. So
+                <strong> your</strong> responsibility is in your hands. Writers
+                tend to be more comfortable with starting a sentence with a year
+                so <strong>time</strong> is important.
+                <strong> Here</strong> you are{" "}
+                <span
+                  style={{ fontFamily: "Merriweather", fontSize: "0.95rem" }}
+                >
+                  one
+                </span>{" "}
+                to change the society now.
+              </span>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">
@@ -1384,18 +1407,20 @@ export default function PuzzlePage() {
                     <h5>Gift's Hub Challenge</h5>
                   </div>
                   <p>
-                    Proin justo sapien, posuere suscipit tortor in, fermentum
-                    mattis elit. Aenean in feugiat purus.
+                    You will be given some clues in the form of text, images or
+                    videos. Try to find the answer of the puzzle and enter them
+                    in the input boxes given below in that page. Not all clues
+                    are important. We advise you to play the challenge in{" "}
+                    <strong>Bigger Screen </strong>(Laptops)
                   </p>
+                  <br />
+                  <h5 style={{ marginBottom: "0.5rem" }}>Instructions :-</h5>
                   <ul>
                     <li>
-                      <h5 style={{ marginBottom: "0.5rem" }}>Instructions</h5>
+                      <p>You will start with 300 points</p>
                     </li>
                     <li>
-                      <p>You start with 300 points</p>
-                    </li>
-                    <li>
-                      <p>The game ends in 20 mins.</p>
+                      <p>The challenge ends in 20 mins.</p>
                     </li>{" "}
                     <li>
                       <p>
@@ -1414,38 +1439,6 @@ export default function PuzzlePage() {
                     <li>
                       <p>Not all clues are important.</p>
                     </li>
-                    <br />
-                    <li>
-                      <div class="text">
-                        <h5>Happy gaming !!!</h5>
-                      </div>
-                    </li>
-                    <form
-                      onSubmit={() => {
-                        setshowmainpage(false);
-                        setstarttime(Date.now());
-                      }}
-                    >
-                      <TextField
-                        inputProps={{ maxLength: 8 }}
-                        InputLabelProps={{
-                          style: { color: "#ffffff" }
-                        }}
-                        id="input-with-icon-grid"
-                        label="Players Name"
-                        placeholder="max 8 characters"
-                        value={username}
-                        onChange={(e) => {
-                          setusername(e.target.value);
-                          settime("a".repeat(e.target.value.length));
-                        }}
-                        required
-                      />
-                      <hr style={{ width: "50%", opacity: "0" }} />
-                      <button type="submit" className="main-button">
-                        Start Game
-                      </button>
-                    </form>
                   </ul>
                 </div>
                 <div
@@ -1459,11 +1452,40 @@ export default function PuzzlePage() {
                   />
                 </div>
               </div>
+              <br />
+              <center>
+                <form
+                  onSubmit={() => {
+                    setshowmainpage(false);
+                    setstarttime(Date.now());
+                  }}
+                >
+                  <TextField
+                    inputProps={{ maxLength: 8 }}
+                    InputLabelProps={{
+                      style: { color: "#ffffff" }
+                    }}
+                    id="input-with-icon-grid"
+                    label="Player Name"
+                    placeholder="max 8 characters"
+                    value={username}
+                    onChange={(e) => {
+                      setusername(e.target.value);
+                      settime("a".repeat(e.target.value.length));
+                    }}
+                    required
+                  />
+                  <hr style={{ width: "50%", opacity: "0" }} />
+                  <button type="submit" className="main-button">
+                    Start Game
+                  </button>
+                </form>
+              </center>
             </div>
           </section>
         </div>
       ) : (
-        <Countdown date={starttime + 1200000} renderer={renderer} />
+        <Countdown date={starttime + 12000000} renderer={renderer} />
       )}
     </div>
   );

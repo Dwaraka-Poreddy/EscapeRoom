@@ -1,8 +1,47 @@
 .App {
   font-family: sans-serif;
   margin: auto;
+  width: 100%;
 }
-
+.portrait {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+@media (orientation: portrait) {
+  .App {
+    display: none;
+  }
+  .portrait {
+    display: block;
+  }
+}
+@media (orientation: landscape) {
+  .App {
+    display: block;
+  }
+  .portrait {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .imageMap {
+    display: none;
+  }
+  .mobileImageMap {
+    display: block;
+  }
+}
+@media screen and (min-width: 960px) {
+  .imageMap {
+    display: block;
+  }
+  .mobileImageMap {
+    display: none;
+  }
+}
 /* font-family: 'Lato', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif; */

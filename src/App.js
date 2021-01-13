@@ -4,7 +4,7 @@ import PuzzlePage from "./PuzzlePage";
 import VioletPage from "./VioletPage";
 export default function App() {
   return (
-    <div className="App">
+    <div>
       <Switch>
         <Route exact path="/" component={PuzzlePage} />
         <Route exact path="/violetpage" component={VioletPage} />

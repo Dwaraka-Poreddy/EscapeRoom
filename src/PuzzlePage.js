@@ -230,7 +230,12 @@ export default function PuzzlePage() {
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed || count === 10) {
-      console.log("inside time complete if");
+      const todoRef = firebase.database().ref("CompletedSankranthiChallange");
+      const todo = {
+        name: username,
+        score: score,
+      };
+      var newKey = todoRef.push(todo).getKey();
       return <Completionist />;
     } else {
       return (

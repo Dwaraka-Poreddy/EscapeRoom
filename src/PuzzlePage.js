@@ -94,6 +94,14 @@ export default function PuzzlePage() {
                 />
               </div>
             </div>
+            <br />
+            <h5 style={{ color: "#fff" }}>
+              <span style={{ fontFamily: "Raleway", color: "#ffffff" }}>
+                {" "}
+                For solutions contact :
+              </span>
+              8367770505 ( Srinivas.K )
+            </h5>
           </div>
         </div>
       </div>
@@ -218,6 +226,9 @@ export default function PuzzlePage() {
       return (
         <div id="about2">
           <center>
+            <h1 style={{ color: "#ffffff", marginBottom: "20px" }}>
+              Gifts' Hub Challenge
+            </h1>
             <div style={{ color: "#ffffff" }} className="container-fluid">
               <h3>
                 <span style={{ fontFamily: "Raleway", color: "#ffffff" }}>
@@ -226,6 +237,7 @@ export default function PuzzlePage() {
                 </span>
                 8367770505
               </h3>
+              <br />
               <img
                 className="imageMap"
                 src="https://firebasestorage.googleapis.com/v0/b/update-image.appspot.com/o/Untitled%20presentation%20(5).png?alt=media&token=6558ec21-a9e8-46ef-a4f8-50628289c2cd"
@@ -253,7 +265,7 @@ export default function PuzzlePage() {
                 </div>
 
                 <div className="card p-4">
-                  <h2> Type your Answers Below</h2>
+                  <h2 style={{ color: "#000000" }}> Type your Answers Below</h2>
                   <center>
                     <div className="row">
                       <div className="col-md-6 col-lg-4 mt-3 pr-3">
@@ -1707,7 +1719,7 @@ export default function PuzzlePage() {
             </section>
           </div>
         ) : (
-          <Countdown date={starttime + 1200000} renderer={renderer} />
+          <Countdown date={starttime + 60000} renderer={renderer} />
         )}
       </div>
     </div>

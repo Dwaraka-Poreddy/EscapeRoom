@@ -50,9 +50,9 @@ font-family: 'Raleway', sans-serif; */
 #about2 {
   text-align: justify;
   font-family: "Lato", sans-serif;
-  padding: 120px 0px;
+  padding: 40px 0px 120px 0;
   position: relative;
-  padding: 120px 0px 90px 0px;
+
   background: rgba(0, 136, 232, 1);
   background: -moz-linear-gradient(
     -45deg,

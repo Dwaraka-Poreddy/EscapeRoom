@@ -60,7 +60,7 @@ export default function PuzzlePage() {
                 data-scroll-reveal="enter left move 30px over 0.6s after 0.4s"
               >
                 <h1 style={{ fontFamily: "Raleway" }}>
-                  <strong> Gift's Hub </strong>wishes {username} a very
+                  <strong> Gifts' Hub </strong>wishes {username} a very
                   <strong> Happy Sankranthi</strong>
                 </h1>
                 <h2 style={{ fontFamily: "Open Sans", color: "#ffffff" }}>
@@ -68,11 +68,17 @@ export default function PuzzlePage() {
                 </h2>
                 <br />
                 <h4 style={{ fontFamily: "Raleway", color: "#ffffff" }}>
-                  Thank you for Playing.{" "}
+                  Thank you for playing.{" "}
                 </h4>
                 <br />
-                <h2 style={{ fontFamily: "Raleway", color: "#ffffff" }}>
-                  Stay tuned for the launch of Gifts Hub on{" "}
+                <h2
+                  style={{
+                    fontFamily: "Raleway",
+                    color: "#ffffff",
+                    textAlign: "justify",
+                  }}
+                >
+                  Stay tuned for the launch of Gifts' Hub on{" "}
                   <strong>Feb 1st</strong>.{" "}
                 </h2>
               </div>
@@ -1004,7 +1010,7 @@ export default function PuzzlePage() {
                 {" "}
                 <center>
                   <img
-                    style={{ width: "100%" }}
+                    style={{ width: "50%" }}
                     src={require("./Images/shapes.png")}
                     alt="1"
                   />
@@ -1090,7 +1096,7 @@ export default function PuzzlePage() {
               <div class="modal-body ">
                 <center>
                   <img
-                    style={{ width: "100%" }}
+                    style={{ width: "50%" }}
                     src={require("./Images/qrc.png")}
                     alt="1"
                   />
@@ -1120,7 +1126,7 @@ export default function PuzzlePage() {
               <div class="modal-body ">
                 <center>
                   <img
-                    style={{ width: "100%" }}
+                    style={{ width: "50%" }}
                     src={require("./Images/lock.jpg")}
                     alt="1"
                   />
@@ -1383,7 +1389,12 @@ export default function PuzzlePage() {
           <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Clue (click to drop the piece)</h4>
+                <h6 class="modal-title" style={{ textAlign: "justify" }}>
+                  Here’s a jigsaw with a clue hidden…Select the piece, drag, and
+                  then click to drop.
+                  <br /> Are you a perfectionist trying to finish the entire
+                  puzzle or a quick-wit looking for the bigger picture?
+                </h6>
                 <button type="button" class="close" data-dismiss="modal">
                   &times;
                 </button>
@@ -1620,41 +1631,41 @@ export default function PuzzlePage() {
                   </div>
                   <div class="left-text col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix order-md-1">
                     <div class="left-heading">
-                      <h5>Gift's Hub Challenge</h5>
+                      <h5>Gifts' Hub Challenge</h5>
                     </div>
+                    <p style={{ textAlign: "justify" }}>
+                      Now gift your loved ones with our free and personalized
+                      website, scheduling the surprises with only a few clicks!
+                      Stay tuned for our full website launch on the{" "}
+                      <strong>1st of February, 2021</strong>
+                    </p>
+                    <br />
                     <p>
-                      You will be given some clues in the form of text, images
-                      or videos. Try to find the answer of the puzzle and enter
-                      them in the input boxes given in that page. Not all clues
-                      are important. It is advised to play this challenge on
-                      <strong> Bigger Screen </strong>(Laptops). A pen and paper
-                      might help you in this challenge.
+                      We will provide you some clues in the form of text,
+                      images, or videos. Crack the puzzles and enter the answers
+                      in the boxes beneath, to finish the challenge! It is
+                      advisable to play this game on a{" "}
+                      <strong> Bigger Screen </strong> (like a laptop).
+                      <br /> Have a paper and pen in handy and also mind you,
+                      not all clues are important!
                     </p>
                     <br />
                     <h5 style={{ marginBottom: "0.5rem" }}>Instructions :-</h5>
                     <ul>
                       <li>
-                        <p>You will start with 300 points</p>
-                      </li>
-                      <li>
-                        <p>The challenge ends in 20 mins.</p>
-                      </li>{" "}
-                      <li>
                         <p>
-                          {" "}
-                          Every minute left after completing the challenge
-                          yields extra 50 points.
+                          Start with 300 points at the start of the challenge
+                          and gain 100 points for every correct answer while you
+                          lose 30 points for every wrong answer.
                         </p>
                       </li>
+
                       <li>
                         <p>
-                          {" "}
-                          For every correct answer you get 100 points and for
-                          every wrong answer you lose 30 points.
+                          You will be given 20 mins to finish this and every
+                          minute left after completion will fetch you an extra
+                          50 points.
                         </p>
-                      </li>{" "}
-                      <li>
-                        <p>Not all clues are important.</p>
                       </li>
                     </ul>
                   </div>
@@ -1668,6 +1679,7 @@ export default function PuzzlePage() {
                     }}
                   >
                     <TextField
+                      autoComplete="off"
                       inputProps={{ maxLength: 8 }}
                       InputLabelProps={{
                         style: { color: "#ffffff" },
@@ -1677,8 +1689,11 @@ export default function PuzzlePage() {
                       placeholder="max 8 characters"
                       value={username}
                       onChange={(e) => {
-                        setusername(e.target.value);
-                        settime("a".repeat(e.target.value.length));
+                        var name = e.target.value;
+                        if (name.slice(-1) != " ") {
+                          setusername(e.target.value);
+                          settime("a".repeat(e.target.value.length));
+                        }
                       }}
                       required
                     />
@@ -1692,7 +1707,7 @@ export default function PuzzlePage() {
             </section>
           </div>
         ) : (
-          <Countdown date={starttime + 12000000} renderer={renderer} />
+          <Countdown date={starttime + 1200000} renderer={renderer} />
         )}
       </div>
     </div>

@@ -2,6 +2,7 @@
   font-family: sans-serif;
   margin: auto;
   width: 100%;
+  text-align: justify;
 }
 .portrait {
   width: 100%;
@@ -47,6 +48,7 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif; */
 
 #about2 {
+  text-align: justify;
   font-family: "Lato", sans-serif;
   padding: 120px 0px;
   position: relative;
@@ -98,6 +100,7 @@ font-family: 'Raleway', sans-serif; */
 
 #about h5,
 #about2 h5 {
+  text-align: justify;
   font-family: "Open Sans", sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -109,6 +112,7 @@ font-family: 'Raleway', sans-serif; */
 
 #about p,
 #about2 p {
+  text-align: justify;
   margin-bottom: 0px;
   font-size: 16px;
   line-height: 30px;
@@ -116,6 +120,7 @@ font-family: 'Raleway', sans-serif; */
   color: #ffffff;
 }
 #about2 ul li {
+  text-align: justify;
   /* list-style: none; */
 }
 #about2 ul li img {
@@ -124,10 +129,12 @@ font-family: 'Raleway', sans-serif; */
 }
 
 #about2 ul li .text {
+  text-align: justify;
   margin-left: 80px;
 }
 
 #about2 ul li .text h6 {
+  text-align: justify;
   padding-top: 12px;
   font-size: 21px;
   font-weight: 500;
@@ -135,6 +142,7 @@ font-family: 'Raleway', sans-serif; */
   margin-bottom: 20px;
 }
 section {
+  text-align: justify;
   margin: 0;
   padding: 0;
   border: 0;
@@ -142,9 +150,11 @@ section {
   display: block;
 }
 li {
+  text-align: justify;
   list-style: none;
 }
 li {
+  text-align: justify;
   margin: 0;
   padding: 18px 0 18px 36px;
   list-style: none;
@@ -158,6 +168,7 @@ li {
   list-style-image: url(https://picsum.photos/200/300);
 } */
 .section-heading h2 {
+  text-align: justify;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 48px;
@@ -166,6 +177,7 @@ li {
   margin-bottom: 20px;
 }
 .section-heading p {
+  text-align: justify;
   font-size: 17px;
   color: #ffffff;
   text-align: center;
@@ -191,6 +203,7 @@ li {
 }
 
 #welcome {
+  text-align: justify;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -209,6 +222,7 @@ TRY IT ... with or without CENTER CENTER
 }
 
 .welcome-area .header-text {
+  text-align: justify;
   position: absolute;
   top: 55%;
   transform: translateY(-60%);
@@ -221,6 +235,7 @@ TRY IT ... with or without CENTER CENTER
 }
 
 .welcome-area .header-text h1 {
+  text-align: justify;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 45px;
@@ -231,6 +246,7 @@ TRY IT ... with or without CENTER CENTER
 }
 
 .welcome-area .header-text p {
+  text-align: justify;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 17px;
@@ -281,6 +297,7 @@ TRY IT ... with or without CENTER CENTER
     margin-bottom: 100px;
   }
   .welcome-area .header-text {
+    text-align: justify;
     top: 55% !important;
     transform: perspective(1px) translateY(-50%) !important;
     text-align: center;
@@ -289,15 +306,18 @@ TRY IT ... with or without CENTER CENTER
     display: none;
   }
   .welcome-area .header-text h1 {
+    text-align: justify;
     font-weight: 600;
     font-size: 24px !important;
     line-height: 30px !important;
     margin-bottom: 20px !important;
   }
   .welcome-area .header-text h1 span {
+    text-align: justify;
     color: #fff;
   }
   .welcome-area .header-text p {
+    text-align: justify;
     text-align: center;
     color: #fff;
     font-size: 14px;

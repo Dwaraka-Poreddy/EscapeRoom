@@ -8,6 +8,7 @@ import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TextField from "@material-ui/core/TextField";
 import bannerimage from "./Images/banner.png";
+import firebase from "./firebase";
 export default function PuzzlePage() {
   const [score, setscore] = useState(300);
   const [dart, setdart] = useState("0000");
@@ -44,6 +45,14 @@ export default function PuzzlePage() {
   const [gradbground, setgradbground] = useState(
     "radial-gradient(at 300px 300px, rgba(159,0,191,.9) 0, #4D4FA7 70%)"
   );
+  const handlefirebaseupload = () => {
+    const todoRef = firebase.database().ref("SankranthiChallenge");
+    const todo = {
+      name: username,
+    };
+    var newKey = todoRef.push(todo).getKey();
+  };
+
   const Completionist = () => (
     <>
       <div
@@ -1688,6 +1697,7 @@ export default function PuzzlePage() {
                     onSubmit={() => {
                       setshowmainpage(false);
                       setstarttime(Date.now());
+                      handlefirebaseupload();
                     }}
                   >
                     <TextField
@@ -1719,7 +1729,7 @@ export default function PuzzlePage() {
             </section>
           </div>
         ) : (
-          <Countdown date={starttime + 1200000} renderer={renderer} />
+          <Countdown date={starttime + 60000} renderer={renderer} />
         )}
       </div>
     </div>

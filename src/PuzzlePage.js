@@ -42,6 +42,7 @@ export default function PuzzlePage() {
   const [count, setcount] = useState(0);
   const [showmainpage, setshowmainpage] = useState(true);
   const [username, setusername] = useState("");
+  const [showhint, setshowhint] = useState(false);
   const [gradbground, setgradbground] = useState(
     "radial-gradient(at 300px 300px, rgba(159,0,191,.9) 0, #4D4FA7 70%)"
   );
@@ -239,13 +240,32 @@ export default function PuzzlePage() {
               Gifts' Hub Challenge
             </h1>
             <div style={{ color: "#ffffff" }} className="container-fluid">
-              <h3>
-                <span style={{ fontFamily: "Raleway", color: "#ffffff" }}>
-                  {" "}
-                  For any queries contact :
-                </span>
-                8367770505
-              </h3>
+              {!showhint ? (
+                <button
+                  style={{ marginBottom: "10px" }}
+                  onClick={() => {
+                    setshowhint(true);
+                  }}
+                  className="btn btn-primary"
+                >
+                  Got stuck ?
+                </button>
+              ) : (
+                <center>
+                  <span
+                    style={{
+                      fontFamily: "Raleway",
+                      color: "#ffffff",
+                      margin: "auto",
+                      display: "inline-block",
+                    }}
+                  >
+                    {" "}
+                    Hint: Go through the image and click on the search icons for
+                    clues. Try typing the answers in all possible places.
+                  </span>
+                </center>
+              )}
               <br />
               <img
                 className="imageMap"

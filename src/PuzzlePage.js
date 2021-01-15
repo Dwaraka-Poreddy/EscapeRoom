@@ -43,9 +43,31 @@ export default function PuzzlePage() {
   const [showmainpage, setshowmainpage] = useState(true);
   const [username, setusername] = useState("");
   const [showhint, setshowhint] = useState(false);
+  const [hinttext, sethinttext] = useState("");
   const [gradbground, setgradbground] = useState(
     "radial-gradient(at 300px 300px, rgba(159,0,191,.9) 0, #4D4FA7 70%)"
   );
+  const getHint = () => {
+    if (!dartcompleted) {
+      sethinttext("dart clue");
+    } else if (!timecompleted) {
+      sethinttext("time hint");
+    } else if (!helloanscompleted) {
+      sethinttext("helloans hint");
+    } else if (!violetcompleted) {
+      sethinttext("violet hint");
+    } else if (!qrcodecompleted) {
+      sethinttext("qrcode hint");
+    } else if (!lockcodecompleted) {
+      sethinttext("lock code hint");
+    } else if (!riddlecompleted) {
+      sethinttext(" riddle hint");
+    } else if (!textanscompleted) {
+      sethinttext("textans hint");
+    } else if (!jigsawcompleted) {
+      sethinttext("jigsaw hint");
+    }
+  };
   const handlefirebaseupload = () => {
     const todoRef = firebase.database().ref("SankranthiChallenge");
     const todo = {
@@ -272,6 +294,17 @@ export default function PuzzlePage() {
                 </center>
               )}
               <br />
+              <button
+                data-toggle="modal"
+                data-target="#hintmodal"
+                style={{ marginBottom: "10px" }}
+                onClick={() => {
+                  getHint();
+                }}
+                className="btn btn-primary"
+              >
+                Hint ?
+              </button>
               <img
                 className="imageMap"
                 src="https://firebasestorage.googleapis.com/v0/b/update-image.appspot.com/o/Untitled%20presentation%20(5).png?alt=media&token=6558ec21-a9e8-46ef-a4f8-50628289c2cd"
@@ -1060,6 +1093,32 @@ export default function PuzzlePage() {
                     src={require("./Images/shapes.png")}
                     alt="1"
                   />
+                </center>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="hintmodal">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Hint</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body ">
+                <center>
+                  <p>{hinttext}</p>
                 </center>
               </div>
               <div class="modal-footer">

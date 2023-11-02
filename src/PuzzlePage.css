@@ -13,10 +13,10 @@
 }
 @media (orientation: portrait) {
   .App {
-    display: none;
+    display: block;
   }
   .portrait {
-    display: block;
+    display: none;
   }
 }
 @media (orientation: landscape) {

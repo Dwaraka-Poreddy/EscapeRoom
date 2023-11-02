@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import Draggable from "react-draggable";
-import "./PuzzlePage.css";
-import ErrorIcon from "@material-ui/icons/Error";
-import OtpInput from "react-otp-input";
-import Countdown from "react-countdown";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import TextField from '@mui/material/TextField';
 import "bootstrap/dist/css/bootstrap.min.css";
-import TextField from "@material-ui/core/TextField";
+import React, { useState } from "react";
+import Countdown from "react-countdown";
+import Draggable from "react-draggable";
+import OtpInput from "react-otp-input";
 import bannerimage from "./Images/banner.png";
+import "./PuzzlePage.css";
 import firebase from "./firebase";
 export default function PuzzlePage() {
   const [score, setscore] = useState(300);
